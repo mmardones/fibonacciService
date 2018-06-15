@@ -17,7 +17,7 @@ import com.matias.testrestservice.controller.FibobacciController;
 public class FibonacciRestServiceApplicationTests {
 	
 	private MockMvc mockMvc;
-	private static final String URL = "/api/fibonacci/";
+	private static final String URL = "/api/servicioFibonacci/";
 	private final FibobacciController configurationController = new FibobacciController();
 	
 	@Test
@@ -26,7 +26,7 @@ public class FibonacciRestServiceApplicationTests {
 	}
 	@Test
 	public void shouldReturnHttpCode200OnGet() throws Exception {
-		mockMvc.perform(get(URL).param("numero", "56").header("token", "2CX56733221DA21SQE11DTB5H")).andExpect(status().isOk());
+		mockMvc.perform(get(URL+"/15").header("token", "2CX56733221DA21SQE11DTB5H")).andExpect(status().isOk());
 	}
 	
 	
