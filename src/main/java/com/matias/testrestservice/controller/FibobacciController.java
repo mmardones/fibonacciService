@@ -33,8 +33,7 @@ public class FibobacciController {
     		System.out.println("numero ="+ numero);    		
     		return fibonacciService.fibonacci(numero);
     	}else
-    		throw new FibonacciException("Debes ingresar un token valido");
-    	
+    		throw new FibonacciException("Debes ingresar un token valido"); 	
     	
     }    
     
