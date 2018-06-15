@@ -26,8 +26,8 @@ Installation
 
 1.- Puerto y Endpoint
 
-		Puerto: 8080 
-		Endpoint: http://localhost:8000/api/servicioFibonacci/{numero}
+	Puerto: 8080 
+	Endpoint: http://localhost:8000/api/servicioFibonacci/{numero}
 
 2.- Instalación
 
