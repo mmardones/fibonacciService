@@ -27,11 +27,19 @@ public class FibonacciRestServiceApplicationTests {
 	}
 	@Test
 	public void shouldReturnHttpCode200OnGet() throws Exception {
-		mockMvc.perform(get(URL+"/15").header("token", "2CX56733221DA21SQE11DTB5H")).andExpect(status().isOk());
+		mockMvc.perform(get(URL+15).header("token", "2CX56733221DA21SQE11DTB5H")).andExpect(status().isOk());
+		
 	}
 	@Test
-	public void shouldReturnHttpCode405OnPUT() throws Exception {
+	public void shouldReturnHttpCode404OnPUT() throws Exception {
 		mockMvc.perform(put(URL)).andExpect(status().isMethodNotAllowed());
 	}
-	
+	@Test
+	public void shouldReturnHttpCode400OnGetWithoutParameter() throws Exception {
+		mockMvc.perform(get(URL+9)).andExpect(status().isBadRequest());
+	}
+	@Test
+	public void shouldReturnHttpCode500OnGetWithoutParameter() throws Exception {
+		mockMvc.perform(get(URL+32).header("token", "424821SQE11DTDWGV385H")).andExpect(status().isBadRequest());
+	}
 }
