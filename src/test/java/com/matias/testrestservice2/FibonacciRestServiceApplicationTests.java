@@ -1,6 +1,7 @@
 package com.matias.testrestservice2;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.Test;
@@ -28,6 +29,9 @@ public class FibonacciRestServiceApplicationTests {
 	public void shouldReturnHttpCode200OnGet() throws Exception {
 		mockMvc.perform(get(URL+"/15").header("token", "2CX56733221DA21SQE11DTB5H")).andExpect(status().isOk());
 	}
-	
+	@Test
+	public void shouldReturnHttpCode405OnPUT() throws Exception {
+		mockMvc.perform(put(URL)).andExpect(status().isMethodNotAllowed());
+	}
 	
 }
