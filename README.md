@@ -1,6 +1,6 @@
 # fibonacciService
 
-Desarrollo:
+Desarrollo
 
 El servicio está hecho en spring boot  java 1.8 y Gradle.
 
@@ -20,23 +20,41 @@ Dependecia:
 
 Utiliza la librería “org.springframework.boot:spring-boot-starter-web”
 
-Ejecución:
+Installation
 
 -Para la ejecución es necesario tener instalado java 8 de 32bit o 64bit.
 
- -Tener disponible el puerto 8080.
+1.- Puerto y Endpoint
+		Puerto: 8080 
+		Endpoint: http://localhost:8000/api/servicioFibonacci/{numero}
 
--Es necesario ingresar a la ruta: https://github.com/mmardones/fibonacciService , debe descargar y ejecutar el siguiente comando para compitar el proyecto:
+2.- Instalación
+	Descargar repositorio https://github.com/mmardones/fibonacciService
+	
+	Linux:
+	1.- Ubicarse en carpeta del proyecto /fibonacciService
+	2.- Compilar
+	/fibonacciService$ ./gradlew build
 
-Window : G:\workspaceSpring\FibonacciService>gradlew build
+	3.- Ejecutar APP
+	/fibonacciService$ java -jar build/libs/FibonacciRestService-0.0.1-SNAPSHOT.jar
 
-Linux:  ruta  ./gradlew build
+	Windows:
+	1.- Ubicarse en carpeta del proyecto /fibonacciService
+	2.- Compilar
+	/fibonacciService/ gradlew build
+	3.- Ejecutar APP
+	/fibonacciService/ java -jar build/libs/FibonacciRestService-0.0.1-SNAPSHOT.jar
+	
+3.- Test:
+	Linux:
+	1.- Test OK:
+	/fibonacciService$ curl -X GET -H "token: 2CX56733221DA21SQE11DTB5H" http://localhost:8080/api/servicioFibonacci/23
+	Respuesta: 7
 
-Comando para Ejecutar la aplicación:
-
-Window  G:\workspaceSpring\FibonacciService>gradlew run
-
-Linux:  ruta  ./gradlew run
+	2.- Test Error:
+	/fibonacciService$ curl -X GET -H "token: 2CX56733221DA21SQE11DTB5H" http://localhost:80080/api/servicioFibonacci/-1
+	Respuesta: {"timestamp":"2018-06-15T21:05:09.738+0000","status":500,"error":"Internal Server Error","message":"Debes ingresar un tamaño mayor o igual a 1","path":"/api/servicioFibonacci/-1"}
 
 Utilización Servicio:
 
