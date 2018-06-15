@@ -39,7 +39,12 @@ public class FibonacciRestServiceApplicationTests {
 		mockMvc.perform(get(URL+9)).andExpect(status().isBadRequest());
 	}
 	@Test
-	public void shouldReturnHttpCode500OnGetWithoutParameter() throws Exception {
+	public void shouldReturnHttpCode500OnGetParameter() throws Exception {
 		mockMvc.perform(get(URL+32).header("token", "424821SQE11DTDWGV385H")).andExpect(status().isBadRequest());
+	}
+	@Test
+	public void shouldReturnHttpCode500OnGetParameterinvalid() throws Exception {
+		mockMvc.perform(get(URL+-1).header("token", "2CX56733221DA21SQE11DTB5H")).andExpect(status().isOk());
+		
 	}
 }
