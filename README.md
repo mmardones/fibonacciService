@@ -48,4 +48,4 @@ Ingresar el Token en el header :
 
 Key: token
 
-Value: 2CX56733221DA21SQE11DTB5Hp
+Value: 2CX56733221DA21SQE11DTB5H
