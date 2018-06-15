@@ -6,7 +6,7 @@ import com.matias.testrestservice.error.FibonacciException;
 
 @Service
 public class TokenService {
-	static final private String TOKEN = "2CX56733221DA21SQE11DTB5H";
+	static final private String TOKEN = "2CX56733221DA21SQE11DTB5H"; 
 	
 	public boolean validateToken(String token) throws FibonacciException{
 		try {
