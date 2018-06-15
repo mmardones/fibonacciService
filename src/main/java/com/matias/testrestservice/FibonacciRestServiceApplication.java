@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TestRestService2Application {
+public class FibonacciRestServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TestRestService2Application.class, args);
+		SpringApplication.run(FibonacciRestServiceApplication.class, args);
 	}
 }

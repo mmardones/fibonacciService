@@ -21,14 +21,13 @@ public class FibobacciController {
 	private TokenService tokenService;
 	
 	
-    @RequestMapping(value = "/servicioFibonacci",  method = RequestMethod.GET)    
+    /*@RequestMapping(value = "/servicioFibonacci",  method = RequestMethod.GET)    
     public Integer getFibonacci(@RequestParam(value="numero") Integer numero) throws FibonacciException {    
     	System.out.println("numero ="+ numero);
     	return fibonacciService.fibonacci(numero);
-    }
-    
-    //@RequestMapping("/servicioFibonacci2/{numero}")   
-    @RequestMapping(value = "/servicioFibonacci2/{numero}",  method = RequestMethod.GET) 
+    }*/
+     
+    @RequestMapping(value = "/servicioFibonacci/{numero}",  method = RequestMethod.GET) 
     public Integer getFibonacci2(@RequestHeader(value = "token") String token, @PathVariable Integer numero) throws FibonacciException {  
     	if(tokenService.validateToken(token)) {  
     		System.out.println("numero ="+ numero);    		
