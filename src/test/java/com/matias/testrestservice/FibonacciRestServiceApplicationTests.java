@@ -38,7 +38,7 @@ public class FibonacciRestServiceApplicationTests {
 	public void beforeTest() {
 		mockMvc = MockMvcBuilders.standaloneSetup(configurationController).build();
 	}
-	
+	/*
 	@Test
 	public void shouldReturnHttpCode404OnPUT() throws Exception {
 		mockMvc.perform(put(URL)).andExpect(status().isMethodNotAllowed());
@@ -46,7 +46,7 @@ public class FibonacciRestServiceApplicationTests {
 	@Test
 	public void shouldReturnHttpCode400OnGetWithoutParameter() throws Exception {
 		mockMvc.perform(get(URL)).andExpect(status().isBadRequest());
-	}/*
+	}
 	@Test
 	public void shouldReturnHttpCode500OnGetParameter() throws Exception {
 		mockMvc.perform(get(URL).header("token","dxcfeCX567332jh43sSQE11DTB5H")).andExpect(status().isBadRequest());
