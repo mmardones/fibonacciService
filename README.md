@@ -22,7 +22,7 @@ Dependecia:
 
 Installation
 
-	-Para la ejecución es necesario tener instalado java 8 de 32bit o 64bit.
+	-Para la ejecución es necesario tener instalado java 1.8 de 32bit o 64bit.
 
 1.- Puerto y Endpoint
 
@@ -53,7 +53,7 @@ Installation
 	Linux:
 	1.- Test OK:
 	/fibonacciService$ curl -X GET -H "token: 2CX56733221DA21SQE11DTB5H" http://localhost:8080/api/servicioFibonacci/23
-	Respuesta: 7
+	Respuesta: 28657
 
 	2.- Test Error:
 	/fibonacciService$ curl -X GET -H "token: 2CX56733221DA21SQE11DTB5H" http://localhost:80080/api/servicioFibonacci/-1
